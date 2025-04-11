@@ -1,94 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="./assets/site.css">
+    <link rel="stylesheet" href="./assets/tailwind.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <div class="bg-preto header jura">
-        <span>J. THOMAS - SOFTWARE ENGINEER</span>
-        <nav class="menu-inline">
-            <ul >
-                <li class="menu-inline-primeiro"><a href="index.html">About me</a></li>
-                <li><a href="projetos.html">Projects</a></li>
-                <li><a href="http://">Challenges Faced</a></li>
-                <li class="menu-inline-ultimo"><a href="http://">Deep Dives</a></li>
-            </ul>
-        </nav>
-        <span class="icones-links">
-            <a href="">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-        </span>
-    </div>
-      <main>
-        <section id="quem-eu">
-           <div class="jura-titulo">
-                Who am I?
-           </div>
-           <p> I'm a Software Engineer known for my persistence in improving things(I'm not always allowed to, unfortunately).
-            In my day to day job, I usually first do what needs to be done and then ponder about what can be changed. 
-            Usually, a lot! Which means I spend a long amount of time thinking about what actually should change, 
-            and when I find out about something that should change I'm usually very confident about it. 
-            I usually don't mind being given the hardest work, as a matter of fact I usually enjoy it.</p>
-        </section> 
-        <section id="eu-oque">
-            <h3 class="jura">
-                My Specialty
-            </h3>
-            <p>
-                I'm skilled in both high and low-level system-wide architecture decision-making and long-term software
-                planning. However, my strongest area is designing sub-systems (also known as key components)—pieces
-                of the software expected to function as a cohesive whole, as you can see on my projects tab.
-            </p>
-        </section>
-        <section> 
-            <h3 class="jura">
-            My Toolkit
-            </h3>
-            <p>
-                I'm still at the early stages of my career so I'm very open to new tools, and usually pick a new one every 3 or so months, but currently these are my toys:
-            </p>
-            <div class="secao-techs">
-                <div >
-                    <h4 class="jura subtitulo">
-                        For web development(and also dashboard development)
-                    </h4>
-                    <div class="icones">
-                        <img src="assets/csharp.svg" alt="">
-                        <img src="assets/netcore.svg" alt="">
-                        <img src="assets/refit_logo.png" alt="">
-                        <img class="icone-maior" src="assets/xunit.svg" alt="">
-                        <img src="assets/javascript.svg" alt="">
-                        <img src="assets/d3js.svg" alt="">
-                        <img src="assets/chartjs.svg" alt="">
+    <section class="dark:bg-black dark:text-white">
+        <div class="mx-auto max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+            <div class="lg:flex lg:justify-between lg:gap-4">
+                <header class="lg:top-0 lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+                    <div>
+                        <h1 class="text-4xl font-bold tracking-tight sm:text-6xl"><a href="/">J. Thomas</a></h1>
+                        <h2 class="mt-3 text-lg font-medium sm:text-xl tracking-wider">Software Engineer
+                        </h2>
+                        <p class="mt-4 max-w-xs leading-normal">I am a problem solver trying to become an everything engineer.</p>
+                        <div class="border-t border-dotted border-gray-700 w-3/4 mt-6"></div>
+                        <div class="mt-6 text-xs mb-4">
+                            <span>
+                                Time tracker: <span id="clock" class="value lcd p-1 digital-clock">0</span>
+                            </span>
+                        </div>
+                        <div class="digital-clock text-xs mt-2">Did you know? The average person spends 4.5 seconds on this section.</div>
                     </div>
-                </div>
-                <div>
-                    <h4 class="jura subtitulo">
-                        For data engineering
-                    </h4>
-                    <div class="icones">
-                        <img class="icone-medio" src="assets/python.svg" alt="">
-                        <img src="assets/airflow.svg" alt="">
-                        <img src="assets/datahub.svg" alt="">
-                        <img class="icone-maior" src="assets/hop.jpg" alt="">
-                        <img class="icone-maior" src="assets/pandas.svg" alt="">
-                    </div>
+                    <ul class="ml-1 mt-8 flex items-center" aria-label="Social media">
+                        <li class="mr-5 shrink-0 text-xs"><a class="block hover:text-slate-200"
+                                href="https://github.com/ImmortalLotus" target="_blank" rel="noreferrer noopener"
+                                aria-label="GitHub (opens in a new tab)" title="GitHub"><span
+                                    class="sr-only">GitHub</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    fill="currentColor" class="h-6 w-6" aria-hidden="true">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                                    </path>
+                                </svg></a></li>
+                        <li class="mr-5 shrink-0 text-xs"><a class="block hover:text-slate-200"
+                                href="https://www.linkedin.com/in/jthomas-de-souza-telles/" target="_blank" rel="noreferrer noopener"
+                                aria-label="LinkedIn (opens in a new tab)" title="LinkedIn"><span
+                                    class="sr-only">LinkedIn</span><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" aria-hidden="true">
+                                    <path
+                                        d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                                    </path>
+                                </svg></a></li>
+                    </ul>
+                </header>
+                <div class="pt-24 lg:w-[52%] lg:py-26">
+                    <p class="mb-10">
+                        The best way to describe myself as a Software Engineer is someone who builds new things to solve old problems. I thrive in environments where I’ve got the freedom to fix real issues and suggest smarter ways of doing things.
+                        I’ve worked across backend, frontend, and data engineering — but I don’t limit myself to any stack. If there’s a problem worth solving, I’ll pick up whatever I need to get it done, even if it’s weird, new, or totally outside my comfort zone.      
+                    </p>
+                    <!-- <p  class="mb-10">
+                        Currently, I work as the Data Engineering <strong>Tech Lead</strong> at
+                        <a href="https://www.instagram.com/setic.rondonia/?hl=en">SETIC/RO</a>, where I lead the Automation
+                        & Data
+                        Engineering team and consult for other data teams. I founded this team from the ground up and have
+                        been focused on
+                        maintaining a modern stack powered by <strong>Apache Airflow</strong>,
+                        while also developing various integrations and automations along the way.
+                    </p> -->
+                    <p>
+                        When I'm free you'll find me tinkering with code(I'm working on building a custom clock) in more
+                        novel settings,
+                        playing soulslikes or practicing classic guitar.
+                    </p>
                 </div>
             </div>
-        </section>
-        <img id="lotus-index" src="assets/Lotus.svg" alt="">
-      </main>
+        </div>
+    </section>
+    <section>
+        <div class="mx-auto max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+            <div class="lg:flex lg:justify-between lg:gap-4">
+                <div class="pt-24 lg:w-[48%] lg:py-24">
+                    <p class="mb-10">
+                        My .Net journey started in May 2021 at 
+                        <a href="https://www.instagram.com/setic.rondonia/?hl=en">SETIC/RO</a>, where
+                         I interned on the dev team and worked on a monolith called <strong>SISNE</strong> (the State's appointment/dismissal system). 
+                        Up until then, I only had Java EE experience, so I was pretty happy learning .Net.
+                    </p>
+                    <p class="mb-10">
+                        By May 2022, I moved to the Data Department, still at SETIC, without dropping .Net. My 
+                        capstone project — an IT Help Desk automation platform — featured a custom orchestrator and 3 .Net
+                         APIs (including a SOAP integration with a legacy system). 
+                        It’s automatically solved over 40k tickets so far, saving about <strong>$10 per ticket</strong> and cutting
+                         resolution time by more than 99%.
+                    </p>
+                    <p>
+                        By December 2023, I became the founder and Tech Lead of the Automation & Data Engineering team, 
+                        briefly stepping away from .NET. That changed in April 2024, when SETUR (Tourism State Department) 
+                        asked for a WhatsApp Chatbot — I built the MVP in .NET, anticipating wider demand. By May 2025, we launched 
+                        a full SaaS Platform based on that MVP, adaptable to any State Government department. The State had originally
+                        planned to buy a similar solution for $200k USD from a vendor
+                        later involved in legal issues — by building our own, we <strong>saved $200k USD</strong> and avoided the fallout.
+                    </p>                                      
+                </div>
+                <header class="lg:top-0 lg:flex lg:max-h-screen lg:w-[52%] lg:flex-col lg:justify-between lg:py-24">
+                    <div class="ms-5">
+                        <div >
+                            <h1 class="text-4xl font-bold tracking-tight sm:text-5xl"><a href="/">Working with .Net</a></h1>
+                            <h2 class="mt-3 text-lg font-medium tracking-tight sm:text-xl">The best developer experience
+                            </h2>
+                            <p class="mt-4 max-w-xs leading-normal"></p>
+                        </div>
+                        <ul class="ml-1 mt-8 flex items-center" aria-label="Social media">
+                            <li class="mr-5 shrink-0 text-xs"><a class="block hover:text-slate-200"
+                                    href="https://github.com/ImmortalLotus" target="_blank" rel="noreferrer noopener"
+                                    aria-label="GitHub (opens in a new tab)" title="GitHub"><span
+                                        class="sr-only">GitHub</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                        fill="currentColor" class="h-6 w-6" aria-hidden="true">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                                        </path>
+                                    </svg></a></li>
+                            <li class="mr-5 shrink-0 text-xs"><a class="block hover:text-slate-200"
+                                    href="https://www.linkedin.com/in/jthomas-de-souza-telles/" target="_blank" rel="noreferrer noopener"
+                                    aria-label="LinkedIn (opens in a new tab)" title="LinkedIn"><span
+                                        class="sr-only">LinkedIn</span><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" aria-hidden="true">
+                                        <path
+                                            d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                                        </path>
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </section>
+    <!-- <img id="lotus-index" src="assets/Lotus.svg" alt=""> -->
     <!-- scripts -->
     <script src="https://kit.fontawesome.com/3e6436a15c.js" crossorigin="anonymous"></script>
+    <script type="module" src="./assets/clock.js"></script>
 </body>
+
 </html>

@@ -3,19 +3,12 @@ body{
   padding:0;
 }
 
-ul{
-  margin:0;
-}
-h4{
-  margin:0;
-}
-
-main::before {
+body::before {
     content: "";
     background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+    background-image: url("bg-preto.svg");
     background-repeat: repeat;
-    opacity: 0.12;
+    opacity: 0.04;
     top: 0;
     left: 0;
     position: fixed;
@@ -28,258 +21,18 @@ html,body{
   height: 100%;
 }
 
-a{
-    text-decoration:none;
-    color:#efefef;
+.dark\:bg-black{
+  background-image: url("bg-preto.svg");
+  opacity: 0.95;
+  background-repeat: repeat;
 }
 
-#lotus-index{
-  position: relative;
-  width: 8%;
-  right:0;
-  bottom:0;
-  left:92%;
+#clock{
+  border-radius: 5px;
+  border-color:#FFF;
+  border-width: 2px;
 }
 
-#lotus-projects{
-    position: relative;
-    width: 8%;
-    right:0;
-    bottom:0;
-    left:95%;
-}
-
-.menu-inline{
-    font-size: 30px;
-}
-
-main{
-  font-size:24px;
-}
-
-.main{
-  margin-left:6rem;
-  margin-right:6rem;
-  margin-top:2.5rem;
-  padding-bottom:2.5rem;
-}
-
-.menu-inline ul {
-    list-style: none;
-    padding: 0;
-    width:100%;
-    display:flex;
-
-    justify-content:space-between;
-  }
-
-  .menu-inline li{
-        display: inline;
-        margin-left:22px;
-        margin-right:22px;
-  }
-
-  .menu-inline-primeiro{
-    margin-left:200px !important;
-  }
-
-  .menu-inline-ultimo{
-    margin-right:200px !important;
-  }
-
-.bg-preto{
-  background-color:#000;
-  color:#efefef;
-  font-size:32px;
-  padding-left:1.8rem;
-  padding-top:1rem;
-  padding-bottom:1rem;
-}
-
-.header{
-  top:0;
-  left:0;
-  display:flex;
-  justify-content: space-between;
-}
-
-.icones-links{
-  padding-right:1.2rem;
-}
-
-.icones-links a {
-  color:#efefef;
-}
-
-.fa-brands{
-  transition:.5s !important;
-}
-
-.fa-brands:hover{
-  transform: scale(1.2) !important;
-}
-
-.jura{
-  font-family:"Jura",sans-serif;
-}
-
-.jura-titulo{
-  font-family:"Jura",sans-serif;
-  font-size:40px;
-  font-weight: bold;
-}
-
-.subtitulo{
-  margin-top:2rem;
-  margin-bottom:2rem;
-}
-
-.secao-techs{
-  margin-left: 5%;
-  margin-right:10%;
-}
-
-.icones{
-  display: flex;
-  justify-content: space-between;
-}
-
-.icones img{
-  width:3rem;
-}
-
-.icone-medio{
-  width: 4rem !important;
-}
-
-.icone-maior{
-  width: 5rem !important;
-}
-
-#lista-de-projetos{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-  grid-template-rows: auto;
-  gap: 24px; /* Adjust spacing as needed */
-  align-items: flex-start;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-  transition:.025s ease;
-  font-family: sans-serif;
-  background-color: #efefef;
-  font-size: 30px;
-  height: 54vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position:relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 8rem;
-    box-shadow: inset 0px -4rem 12px -1rem rgba(250, 250, 250, 0.8);
-    pointer-events: none;
-    transition: all ease-in .5s;
-  }
-}
-
-.card h4{
-  font-family: "Raleway",sans-serif;  
-}
-
-.card p{
-  font-size: 1.125rem;
-  backface-visibility: hidden;
-}
-
-.ano{
-  font-size: 14px;
-  color: #6c757d!important;
-  font-weight: bold;
-}
-
-
-/* Add rounded corners to the top left and the top right corner of the image */
-.card img {
-  max-width: 100%;
-  border-radius: 5px 5px 0 0;
-  background-color:#fff;
-  min-width: 100%;
-}
-
-.container{
-  padding:1rem;
-  flex-grow: 1;
-}
-
-.role{
-  font-size:14px !important;
-  color: #efefef!important;
-  font-weight: bold;
-  background-color: #000;
-  width: 100%;
-  padding:0.4rem;
-  margin-bottom: 0.5rem;
-  font-family: "Jura", sans-serif;
-}
-
-.subtitulo-card{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.3rem;
-  padding-right: 0.5rem;
-}
-
-.readmore {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(-25%);
-  font-size: 1.2rem;
-  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
-  text-align: center;
-  opacity: 1;
-  pointer-events: initial;
-  background:#181818c9;
-  color: #fff;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  transition: all ease-in-out .325s;
-  transition-delay: 0.5s;
-  font-family: "Jura",sans-serif;
-  font-weight: 900;
-  
-  &:after {
-    content: "";
-    font-size: 0.8rem;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 0.5rem;
-    transform: translateY(-50%);
-  }
-}
-
-section{
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  padding-left:2.5rem;
-}
-
-#quem-eu{
-  margin-top:3rem;
-}
-
-#eu-oque{
-  background-color: #000;
-
+.digital-clock {
+  font-family: 'Share Tech Mono', monospace;
 }
