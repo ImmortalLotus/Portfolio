@@ -114,3 +114,5 @@ Thumbs.db
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+package.json
+tailwind.config.js
