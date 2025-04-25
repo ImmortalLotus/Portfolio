@@ -36,3 +36,21 @@ html,body{
 .digital-clock {
   font-family: 'Share Tech Mono', monospace;
 }
+
+.square{
+  width: calc(1rem - 1px);
+  height: calc(1rem - 1px);
+  margin-top: 1px;
+  margin-left: 1px;
+  border:1px solid #FFF;
+  border-radius: 5px;
+}
+
+.square-exception{
+  width: calc(1rem - 1px);
+  height: calc(1rem - 1px);
+  margin-top: 1px;
+  margin-left: 1px;
+  border:#FFF;
+  border-radius: 5px;
+}
