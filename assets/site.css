@@ -54,3 +54,8 @@ html,body{
   border:#FFF;
   border-radius: 5px;
 }
+
+.puzzle-start{
+  left:0;
+  top:0;
+}
