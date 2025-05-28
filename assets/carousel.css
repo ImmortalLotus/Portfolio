@@ -1,0 +1,60 @@
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100dvh;
+  overflow-x:hidden !important;
+}
+
+slide-carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+.track {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  gap: 2rem;
+
+  > div {
+    width: 100%;
+    align-content: center;
+    height: auto;
+    user-select: none;
+  }
+}
+
+.bullets {
+  padding-inline: 0.25rem;
+  height: 0.15rem;
+  background-color: var(--neutral-200);
+  border-radius: 1rem;
+  position: relative;
+  width: 100%;
+  max-width: 75ch;
+
+  .bullet {
+    width: calc(100% / 3);
+    background-color: var(--neutral-700);
+    height: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in;
+  }
+}
+
+.bg-white{
+  transition:.5s;
+}
+
+.text-black{
+  transition:.5s;
+}
+
+.carousel-selecao{
+  cursor: pointer;
+}

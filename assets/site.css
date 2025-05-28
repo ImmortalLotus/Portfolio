@@ -27,6 +27,12 @@ html,body{
   background-repeat: repeat;
 }
 
+.bg-black{
+  background-image: url("bg-preto.svg");
+  opacity: 0.95;
+  background-repeat: repeat;
+}
+
 #clock{
   border-radius: 5px;
   border-color:#FFF;
